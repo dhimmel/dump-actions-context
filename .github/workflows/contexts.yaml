@@ -1,5 +1,5 @@
 # based on https://docs.github.com/en/actions/learn-github-actions/contexts#example-printing-context-information-to-the-log
-name: Context testing
+name: ${{ github.event_name }} context
 on:
   push:
   pull_request:
