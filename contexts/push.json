@@ -1,15 +1,15 @@
 {
   "github": {
-    "token": "ghs_XUCwAtvvgVxZW78xM6JkbKqa7O7jbq2MpY5e",
+    "token": "ghs_smM5TVgNZpiIhd7D5aL7yEBofT6Uzt4Zrwzg",
     "job": "dump_contexts_to_log",
     "ref": "refs/heads/main",
-    "sha": "8ed9c7422f33e61eff9b35a54d1c370c4aae597e",
+    "sha": "aeb001d3764b55d57a36a92d46fc6fe4dbd39d10",
     "repository": "dhimmel/dump-actions-context",
     "repository_owner": "dhimmel",
     "repository_owner_id": "1117703",
     "repositoryUrl": "git://github.com/dhimmel/dump-actions-context.git",
-    "run_id": "7466229727",
-    "run_number": "65",
+    "run_id": "7466326726",
+    "run_number": "66",
     "retention_days": "90",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
@@ -25,9 +25,9 @@
     "base_ref": "",
     "event_name": "push",
     "event": {
-      "after": "8ed9c7422f33e61eff9b35a54d1c370c4aae597e",
+      "after": "aeb001d3764b55d57a36a92d46fc6fe4dbd39d10",
       "base_ref": null,
-      "before": "d24c738eef19e9614a4012e473d55050d40ce547",
+      "before": "c13a2da358786837a71ba937e6a11d4e0e97058a",
       "commits": [
         {
           "author": {
@@ -36,75 +36,39 @@
             "username": "dhimmel"
           },
           "committer": {
-            "email": "daniel.himmelstein@gmail.com",
+            "email": "dhimmel@related.vc",
             "name": "Daniel Himmelstein",
             "username": "dhimmel"
           },
           "distinct": true,
-          "id": "f515d9352a6aea46b7d477de7af465e96cea19d9",
-          "message": "README: note materialized context",
-          "timestamp": "2024-01-09T14:58:37-05:00",
-          "tree_id": "a37addf9da2d0cdd2159a0699349421fb1c868b5",
-          "url": "https://github.com/dhimmel/dump-actions-context/commit/f515d9352a6aea46b7d477de7af465e96cea19d9"
-        },
-        {
-          "author": {
-            "email": "dhimmel@users.noreply.github.com",
-            "name": "dhimmel",
-            "username": "dhimmel"
-          },
-          "committer": {
-            "email": "daniel.himmelstein@gmail.com",
-            "name": "Daniel Himmelstein",
-            "username": "dhimmel"
-          },
-          "distinct": true,
-          "id": "ec8874429a74012bbcdcdc103aca67ee4380c519",
-          "message": "contexts for push on 2024-01-09\n\nhttps://github.com/dhimmel/dump-actions-context/actions/runs/7466211143",
-          "timestamp": "2024-01-09T14:58:37-05:00",
-          "tree_id": "24aba298724ddb73b10c51f85b356c58ce037d08",
-          "url": "https://github.com/dhimmel/dump-actions-context/commit/ec8874429a74012bbcdcdc103aca67ee4380c519"
-        },
-        {
-          "author": {
-            "email": "dhimmel@users.noreply.github.com",
-            "name": "dhimmel",
-            "username": "dhimmel"
-          },
-          "committer": {
-            "email": "daniel.himmelstein@gmail.com",
-            "name": "Daniel Himmelstein",
-            "username": "dhimmel"
-          },
-          "distinct": true,
-          "id": "8ed9c7422f33e61eff9b35a54d1c370c4aae597e",
-          "message": "contexts for pull_request on 2024-01-09\n\nhttps://github.com/dhimmel/dump-actions-context/actions/runs/7466221673",
-          "timestamp": "2024-01-09T14:58:37-05:00",
-          "tree_id": "18004810290ed847ccb81abf60ebe0b923aa43fe",
-          "url": "https://github.com/dhimmel/dump-actions-context/commit/8ed9c7422f33e61eff9b35a54d1c370c4aae597e"
+          "id": "aeb001d3764b55d57a36a92d46fc6fe4dbd39d10",
+          "message": "contexts.yaml workflow: on more event types",
+          "timestamp": "2024-01-09T15:07:41-05:00",
+          "tree_id": "74e33353d71f3822738825961517d7fe98f14815",
+          "url": "https://github.com/dhimmel/dump-actions-context/commit/aeb001d3764b55d57a36a92d46fc6fe4dbd39d10"
         }
       ],
-      "compare": "https://github.com/dhimmel/dump-actions-context/compare/d24c738eef19...8ed9c7422f33",
+      "compare": "https://github.com/dhimmel/dump-actions-context/compare/c13a2da35878...aeb001d3764b",
       "created": false,
       "deleted": false,
       "forced": false,
       "head_commit": {
         "author": {
-          "email": "dhimmel@users.noreply.github.com",
-          "name": "dhimmel",
+          "email": "dhimmel@related.vc",
+          "name": "Daniel Himmelstein",
           "username": "dhimmel"
         },
         "committer": {
-          "email": "daniel.himmelstein@gmail.com",
+          "email": "dhimmel@related.vc",
           "name": "Daniel Himmelstein",
           "username": "dhimmel"
         },
         "distinct": true,
-        "id": "8ed9c7422f33e61eff9b35a54d1c370c4aae597e",
-        "message": "contexts for pull_request on 2024-01-09\n\nhttps://github.com/dhimmel/dump-actions-context/actions/runs/7466221673",
-        "timestamp": "2024-01-09T14:58:37-05:00",
-        "tree_id": "18004810290ed847ccb81abf60ebe0b923aa43fe",
-        "url": "https://github.com/dhimmel/dump-actions-context/commit/8ed9c7422f33e61eff9b35a54d1c370c4aae597e"
+        "id": "aeb001d3764b55d57a36a92d46fc6fe4dbd39d10",
+        "message": "contexts.yaml workflow: on more event types",
+        "timestamp": "2024-01-09T15:07:41-05:00",
+        "tree_id": "74e33353d71f3822738825961517d7fe98f14815",
+        "url": "https://github.com/dhimmel/dump-actions-context/commit/aeb001d3764b55d57a36a92d46fc6fe4dbd39d10"
       },
       "pusher": {
         "email": "daniel.himmelstein@gmail.com",
@@ -199,7 +163,7 @@
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/dhimmel/dump-actions-context/pulls{/number}",
-        "pushed_at": 1704830317,
+        "pushed_at": 1704830863,
         "releases_url": "https://api.github.com/repos/dhimmel/dump-actions-context/releases{/id}",
         "size": 10,
         "ssh_url": "git@github.com:dhimmel/dump-actions-context.git",
@@ -256,17 +220,17 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "dhimmel/dump-actions-context/.github/workflows/contexts.yaml@refs/heads/main",
-    "workflow_sha": "8ed9c7422f33e61eff9b35a54d1c370c4aae597e",
+    "workflow_sha": "aeb001d3764b55d57a36a92d46fc6fe4dbd39d10",
     "workspace": "/home/runner/work/dump-actions-context/dump-actions-context",
     "action": "__run_8",
     "event_path": "/home/runner/work/_temp/_github_workflow/event.json",
     "action_repository": "",
     "action_ref": "",
-    "path": "/home/runner/work/_temp/_runner_file_commands/add_path_d592e334-f726-45a7-b1ec-1d9cbd8bf686",
-    "env": "/home/runner/work/_temp/_runner_file_commands/set_env_d592e334-f726-45a7-b1ec-1d9cbd8bf686",
-    "step_summary": "/home/runner/work/_temp/_runner_file_commands/step_summary_d592e334-f726-45a7-b1ec-1d9cbd8bf686",
-    "state": "/home/runner/work/_temp/_runner_file_commands/save_state_d592e334-f726-45a7-b1ec-1d9cbd8bf686",
-    "output": "/home/runner/work/_temp/_runner_file_commands/set_output_d592e334-f726-45a7-b1ec-1d9cbd8bf686"
+    "path": "/home/runner/work/_temp/_runner_file_commands/add_path_8f50bbb2-a78a-4bf5-8921-9a8dcdf1ec81",
+    "env": "/home/runner/work/_temp/_runner_file_commands/set_env_8f50bbb2-a78a-4bf5-8921-9a8dcdf1ec81",
+    "step_summary": "/home/runner/work/_temp/_runner_file_commands/step_summary_8f50bbb2-a78a-4bf5-8921-9a8dcdf1ec81",
+    "state": "/home/runner/work/_temp/_runner_file_commands/save_state_8f50bbb2-a78a-4bf5-8921-9a8dcdf1ec81",
+    "output": "/home/runner/work/_temp/_runner_file_commands/set_output_8f50bbb2-a78a-4bf5-8921-9a8dcdf1ec81"
   },
   "job": {
     "status": "success"
