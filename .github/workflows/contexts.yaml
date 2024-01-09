@@ -19,6 +19,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # avoid checking out the repository in a detached state
+          ref: ${{ github.head_ref }}
       - name: Dump github context
         run: echo '${{ toJSON(github) }}' | jq . -C
       - name: Dump job context
