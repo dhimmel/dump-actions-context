@@ -11,9 +11,12 @@ jobs:
   dump_contexts_to_log:
     name: ${{ github.event_name }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
       - name: Dump github context
-        id: github_context_step
         run: echo '${{ toJSON(github) }}'
       - name: Dump job context
         run: echo '${{ toJSON(job) }}'
@@ -25,3 +28,16 @@ jobs:
         run: echo '${{ toJSON(strategy) }}'
       - name: Dump matrix context
         run: echo '${{ toJSON(matrix) }}'
+      - name: Dump all contexts to a file
+        run: |
+          echo '{"github": ${{ toJSON(github) }},' > contexts.json
+          echo '"job": ${{ toJSON(job) }},' >> contexts.json
+          echo '"steps": ${{ toJSON(steps) }},' >> contexts.json
+          echo '"runner": ${{ toJSON(runner) }},' >> contexts.json
+          echo '"strategy": ${{ toJSON(strategy) }},' >> contexts.json
+          echo '"matrix": ${{ toJSON(matrix) }} }' >> contexts.json
+          jq . contexts.json > contexts/${{ github.event_name }}.json
+          jq . -C contexts.json
+          rm contexts.json
+      - name: Deploy contexts
+        uses: stefanzweifel/git-auto-commit-action@v5
