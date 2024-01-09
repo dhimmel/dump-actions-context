@@ -1,6 +1,6 @@
 {
   "github": {
-    "token": "ghs_5bSKYgXu7v516qLFMWO3y4I5w5M2392p5v2h",
+    "token": "ghs_gW0mZxls2fXf1hTZE3crLIqfbGWZOb2uS9C3",
     "job": "dump_contexts_to_log",
     "ref": "refs/tags/test",
     "sha": "5907a80d7a7b703a2a1d10f1ef112265b69ff788",
@@ -8,8 +8,8 @@
     "repository_owner": "dhimmel",
     "repository_owner_id": "1117703",
     "repositoryUrl": "git://github.com/dhimmel/dump-actions-context.git",
-    "run_id": "7466529961",
-    "run_number": "83",
+    "run_id": "7466529965",
+    "run_number": "85",
     "retention_days": "90",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
@@ -25,7 +25,7 @@
     "base_ref": "",
     "event_name": "release",
     "event": {
-      "action": "created",
+      "action": "published",
       "release": {
         "assets": [],
         "assets_url": "https://api.github.com/repos/dhimmel/dump-actions-context/releases/136391859/assets",
@@ -212,11 +212,11 @@
     "event_path": "/home/runner/work/_temp/_github_workflow/event.json",
     "action_repository": "",
     "action_ref": "",
-    "path": "/home/runner/work/_temp/_runner_file_commands/add_path_1bf1f7a6-b40b-46aa-b69f-4e1bbcd9653e",
-    "env": "/home/runner/work/_temp/_runner_file_commands/set_env_1bf1f7a6-b40b-46aa-b69f-4e1bbcd9653e",
-    "step_summary": "/home/runner/work/_temp/_runner_file_commands/step_summary_1bf1f7a6-b40b-46aa-b69f-4e1bbcd9653e",
-    "state": "/home/runner/work/_temp/_runner_file_commands/save_state_1bf1f7a6-b40b-46aa-b69f-4e1bbcd9653e",
-    "output": "/home/runner/work/_temp/_runner_file_commands/set_output_1bf1f7a6-b40b-46aa-b69f-4e1bbcd9653e"
+    "path": "/home/runner/work/_temp/_runner_file_commands/add_path_285f5c8c-91ff-4f48-b2b0-54ed1fe1bc2c",
+    "env": "/home/runner/work/_temp/_runner_file_commands/set_env_285f5c8c-91ff-4f48-b2b0-54ed1fe1bc2c",
+    "step_summary": "/home/runner/work/_temp/_runner_file_commands/step_summary_285f5c8c-91ff-4f48-b2b0-54ed1fe1bc2c",
+    "state": "/home/runner/work/_temp/_runner_file_commands/save_state_285f5c8c-91ff-4f48-b2b0-54ed1fe1bc2c",
+    "output": "/home/runner/work/_temp/_runner_file_commands/set_output_285f5c8c-91ff-4f48-b2b0-54ed1fe1bc2c"
   },
   "job": {
     "status": "success"
@@ -225,7 +225,7 @@
   "runner": {
     "os": "Linux",
     "arch": "X64",
-    "name": "GitHub Actions 2",
+    "name": "GitHub Actions 4",
     "environment": "github-hosted",
     "tool_cache": "/opt/hostedtoolcache",
     "temp": "/home/runner/work/_temp",
