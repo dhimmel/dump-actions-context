@@ -28,6 +28,8 @@ jobs:
         run: echo '${{ toJSON(strategy) }}' | jq . -C
       - name: Dump matrix context
         run: echo '${{ toJSON(matrix) }}' | jq . -C
+      - name: Dump env context
+        run: echo '${{ toJSON(env) }}' | jq . -C
       - name: Dump all contexts to a file
         run: |
           echo '{"github": ${{ toJSON(github) }},' > contexts.json
