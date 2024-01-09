@@ -9,6 +9,8 @@ Search for workflow runs by event type:
 - [workflow_dispatch](https://github.com/dhimmel/dump-actions-context/actions?query=event:workflow_dispatch)
 - [schedule](https://github.com/dhimmel/dump-actions-context/actions?query=event:schedule)
 
+Contexts are also combined into a single JSON file and written back to the repository in the [`contexts`](contexts) directory.
+
 References:
 
 - https://docs.github.com/en/actions/learn-github-actions/contexts#example-printing-context-information-to-the-log
