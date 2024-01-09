@@ -23,20 +23,22 @@ jobs:
           # avoid checking out the repository in a detached state
           # https://github.com/stefanzweifel/git-auto-commit-action/issues/70
           ref: main
+      - name: Install Dependencies
+        run: sudo apt-get install --yes jq gron
       - name: Dump github context
-        run: echo '${{ toJSON(github) }}' | jq . -C
+        run: echo '${{ toJSON(github) }}' | gron --no-sort
       - name: Dump job context
-        run: echo '${{ toJSON(job) }}' | jq . -C
+        run: echo '${{ toJSON(job) }}' | gron --no-sort
       - name: Dump steps context
-        run: echo '${{ toJSON(steps) }}' | jq . -C
+        run: echo '${{ toJSON(steps) }}' | gron --no-sort
       - name: Dump runner context
-        run: echo '${{ toJSON(runner) }}' | jq . -C
+        run: echo '${{ toJSON(runner) }}' | gron --no-sort
       - name: Dump strategy context
-        run: echo '${{ toJSON(strategy) }}' | jq . -C
+        run: echo '${{ toJSON(strategy) }}' | gron --no-sort
       - name: Dump matrix context
-        run: echo '${{ toJSON(matrix) }}' | jq . -C
+        run: echo '${{ toJSON(matrix) }}' | gron --no-sort
       - name: Dump env context
-        run: echo '${{ toJSON(env) }}' | jq . -C
+        run: echo '${{ toJSON(env) }}' | gron --no-sort
       - name: Dump all contexts to a file
         run: |
           echo '{"github": ${{ toJSON(github) }},' > contexts.json
@@ -46,7 +48,8 @@ jobs:
           echo '"strategy": ${{ toJSON(strategy) }},' >> contexts.json
           echo '"matrix": ${{ toJSON(matrix) }} }' >> contexts.json
           jq . contexts.json > contexts/${{ github.event_name }}.json
-          jq . -C contexts.json
+          gron --no-sort contexts.json > contexts/${{ github.event_name }}.gron
+          gron --no-sort --colorize contexts.json
           rm contexts.json
       - name: Set current date
         run: echo "CURRENT_DATE=$(date --utc --iso)" >> $GITHUB_ENV  
