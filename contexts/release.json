@@ -1,6 +1,6 @@
 {
   "github": {
-    "token": "ghs_rKVcjKelYB0Dldypx4synBBVpns30H3OAuzZ",
+    "token": "ghs_5bSKYgXu7v516qLFMWO3y4I5w5M2392p5v2h",
     "job": "dump_contexts_to_log",
     "ref": "refs/tags/test",
     "sha": "5907a80d7a7b703a2a1d10f1ef112265b69ff788",
@@ -8,8 +8,8 @@
     "repository_owner": "dhimmel",
     "repository_owner_id": "1117703",
     "repositoryUrl": "git://github.com/dhimmel/dump-actions-context.git",
-    "run_id": "7466526078",
-    "run_number": "82",
+    "run_id": "7466529961",
+    "run_number": "83",
     "retention_days": "90",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
@@ -25,10 +25,10 @@
     "base_ref": "",
     "event_name": "release",
     "event": {
-      "action": "deleted",
+      "action": "created",
       "release": {
         "assets": [],
-        "assets_url": "https://api.github.com/repos/dhimmel/dump-actions-context/releases/136391695/assets",
+        "assets_url": "https://api.github.com/repos/dhimmel/dump-actions-context/releases/136391859/assets",
         "author": {
           "avatar_url": "https://avatars.githubusercontent.com/u/1117703?v=4",
           "events_url": "https://api.github.com/users/dhimmel/events{/privacy}",
@@ -53,16 +53,16 @@
         "created_at": "2024-01-09T20:25:06Z",
         "draft": false,
         "html_url": "https://github.com/dhimmel/dump-actions-context/releases/tag/test",
-        "id": 136391695,
+        "id": 136391859,
         "name": "Test Release to generate release context",
-        "node_id": "RE_kwDOH1Hv2c4IISwP",
-        "prerelease": true,
-        "published_at": "2024-01-09T20:26:08Z",
+        "node_id": "RE_kwDOH1Hv2c4IISyz",
+        "prerelease": false,
+        "published_at": "2024-01-09T20:27:32Z",
         "tag_name": "test",
         "tarball_url": "https://api.github.com/repos/dhimmel/dump-actions-context/tarball/test",
         "target_commitish": "main",
-        "upload_url": "https://uploads.github.com/repos/dhimmel/dump-actions-context/releases/136391695/assets{?name,label}",
-        "url": "https://api.github.com/repos/dhimmel/dump-actions-context/releases/136391695",
+        "upload_url": "https://uploads.github.com/repos/dhimmel/dump-actions-context/releases/136391859/assets{?name,label}",
+        "url": "https://api.github.com/repos/dhimmel/dump-actions-context/releases/136391859",
         "zipball_url": "https://api.github.com/repos/dhimmel/dump-actions-context/zipball/test"
       },
       "repository": {
@@ -150,7 +150,7 @@
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/dhimmel/dump-actions-context/pulls{/number}",
-        "pushed_at": "2024-01-09T20:27:04Z",
+        "pushed_at": "2024-01-09T20:27:20Z",
         "releases_url": "https://api.github.com/repos/dhimmel/dump-actions-context/releases{/id}",
         "size": 10,
         "ssh_url": "git@github.com:dhimmel/dump-actions-context.git",
@@ -212,11 +212,11 @@
     "event_path": "/home/runner/work/_temp/_github_workflow/event.json",
     "action_repository": "",
     "action_ref": "",
-    "path": "/home/runner/work/_temp/_runner_file_commands/add_path_b81eda00-a4bd-43f9-bc03-1c7db5d9b1a4",
-    "env": "/home/runner/work/_temp/_runner_file_commands/set_env_b81eda00-a4bd-43f9-bc03-1c7db5d9b1a4",
-    "step_summary": "/home/runner/work/_temp/_runner_file_commands/step_summary_b81eda00-a4bd-43f9-bc03-1c7db5d9b1a4",
-    "state": "/home/runner/work/_temp/_runner_file_commands/save_state_b81eda00-a4bd-43f9-bc03-1c7db5d9b1a4",
-    "output": "/home/runner/work/_temp/_runner_file_commands/set_output_b81eda00-a4bd-43f9-bc03-1c7db5d9b1a4"
+    "path": "/home/runner/work/_temp/_runner_file_commands/add_path_1bf1f7a6-b40b-46aa-b69f-4e1bbcd9653e",
+    "env": "/home/runner/work/_temp/_runner_file_commands/set_env_1bf1f7a6-b40b-46aa-b69f-4e1bbcd9653e",
+    "step_summary": "/home/runner/work/_temp/_runner_file_commands/step_summary_1bf1f7a6-b40b-46aa-b69f-4e1bbcd9653e",
+    "state": "/home/runner/work/_temp/_runner_file_commands/save_state_1bf1f7a6-b40b-46aa-b69f-4e1bbcd9653e",
+    "output": "/home/runner/work/_temp/_runner_file_commands/set_output_1bf1f7a6-b40b-46aa-b69f-4e1bbcd9653e"
   },
   "job": {
     "status": "success"
