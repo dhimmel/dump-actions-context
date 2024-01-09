@@ -17,17 +17,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Dump github context
-        run: echo '${{ toJSON(github) }}'
+        run: echo '${{ toJSON(github) }}' | jq . -C
       - name: Dump job context
-        run: echo '${{ toJSON(job) }}'
+        run: echo '${{ toJSON(job) }}' | jq . -C
       - name: Dump steps context
-        run: echo '${{ toJSON(steps) }}'
+        run: echo '${{ toJSON(steps) }}' | jq . -C
       - name: Dump runner context
-        run: echo '${{ toJSON(runner) }}'
+        run: echo '${{ toJSON(runner) }}' | jq . -C
       - name: Dump strategy context
-        run: echo '${{ toJSON(strategy) }}'
+        run: echo '${{ toJSON(strategy) }}' | jq . -C
       - name: Dump matrix context
-        run: echo '${{ toJSON(matrix) }}'
+        run: echo '${{ toJSON(matrix) }}' | jq . -C
       - name: Dump all contexts to a file
         run: |
           echo '{"github": ${{ toJSON(github) }},' > contexts.json
@@ -39,5 +39,9 @@ jobs:
           jq . contexts.json > contexts/${{ github.event_name }}.json
           jq . -C contexts.json
           rm contexts.json
+      - name: Set current date
+        run: echo "CURRENT_DATE=$(date --utc --iso)" >> $GITHUB_ENV  
       - name: Deploy contexts
         uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+            commit_message: "contexts for ${{ github.event_name }} on ${{ env.CURRENT_DATE }}\n\n${{ github.event.repository.html_url }}/actions/runs/${{ github.run_id }}"
