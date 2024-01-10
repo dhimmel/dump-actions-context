@@ -14,6 +14,7 @@ jobs:
   dump_contexts_to_log:
     name: ${{ github.event_name }}
     runs-on: ubuntu-latest
+    # https://docs.github.com/en/actions/security-guides/automatic-token-authentication#permissions-for-the-github_token
     permissions:
       contents: write
     steps:
@@ -25,6 +26,9 @@ jobs:
           ref: main
       - name: Install Dependencies
         run: sudo apt-get install --yes jq gron
+      # Note that the github context includes a token, but this is likely okay:
+      # > Before each job begins, GitHub fetches an installation access token for the job.
+      # > The GITHUB_TOKEN expires when a job finishes or after a maximum of 24 hours.
       - name: Dump github context
         run: echo '${{ toJSON(github) }}' | gron --no-sort
       - name: Dump job context
