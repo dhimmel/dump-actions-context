@@ -26,7 +26,7 @@ jobs:
           ref: main
       - name: Install Dependencies
         run: sudo apt-get install --yes jq gron
-      # Note that the github context includes a token, but this is likely okay:
+      # Note that the github context includes a token, but it is scrubbed from logs.
       # > Before each job begins, GitHub fetches an installation access token for the job.
       # > The GITHUB_TOKEN expires when a job finishes or after a maximum of 24 hours.
       - name: Dump github context
@@ -51,7 +51,7 @@ jobs:
           echo '"runner": ${{ toJSON(runner) }},' >> contexts.json
           echo '"strategy": ${{ toJSON(strategy) }},' >> contexts.json
           echo '"matrix": ${{ toJSON(matrix) }} }' >> contexts.json
-          jq . contexts.json > contexts/${{ github.event_name }}.json
+          jq '.github.token = "***"' contexts.json > contexts/${{ github.event_name }}.json
           gron --no-sort contexts.json > contexts/${{ github.event_name }}.gron
           gron --no-sort --colorize contexts.json
           rm contexts.json
