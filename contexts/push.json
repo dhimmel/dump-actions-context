@@ -3,13 +3,13 @@
     "token": "***",
     "job": "dump_contexts_to_log",
     "ref": "refs/heads/main",
-    "sha": "c8e595e8399203d1dec58a754f25a5a5f5e3d534",
+    "sha": "51067c1ea1b0b0bda20768a9b1c9a0a5d608ac5d",
     "repository": "dhimmel/dump-actions-context",
     "repository_owner": "dhimmel",
     "repository_owner_id": "1117703",
     "repositoryUrl": "git://github.com/dhimmel/dump-actions-context.git",
-    "run_id": "7508106462",
-    "run_number": "92",
+    "run_id": "7508641446",
+    "run_number": "96",
     "retention_days": "90",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
@@ -25,9 +25,9 @@
     "base_ref": "",
     "event_name": "push",
     "event": {
-      "after": "c8e595e8399203d1dec58a754f25a5a5f5e3d534",
+      "after": "51067c1ea1b0b0bda20768a9b1c9a0a5d608ac5d",
       "base_ref": null,
-      "before": "68c2731e72065f46e16c1cf509c557fc01af76df",
+      "before": "3c845d7c0375e1261fd31728c2740db460ace979",
       "commits": [
         {
           "author": {
@@ -41,17 +41,17 @@
             "username": "dhimmel"
           },
           "distinct": true,
-          "id": "c8e595e8399203d1dec58a754f25a5a5f5e3d534",
-          "message": "redact github.token in materialized logs\n\nalready redacted in workflow log output by github",
-          "timestamp": "2024-01-12T17:24:45-05:00",
-          "tree_id": "9f574e2c991d950f0a0693556c82b865cd2b2d67",
-          "url": "https://github.com/dhimmel/dump-actions-context/commit/c8e595e8399203d1dec58a754f25a5a5f5e3d534"
+          "id": "51067c1ea1b0b0bda20768a9b1c9a0a5d608ac5d",
+          "message": "note single quote in JSON bug",
+          "timestamp": "2024-01-12T18:40:53-05:00",
+          "tree_id": "59f860e3edc1928ecc88862524aa43cfe213ad9e",
+          "url": "https://github.com/dhimmel/dump-actions-context/commit/51067c1ea1b0b0bda20768a9b1c9a0a5d608ac5d"
         }
       ],
-      "compare": "https://github.com/dhimmel/dump-actions-context/compare/68c2731e7206...c8e595e83992",
+      "compare": "https://github.com/dhimmel/dump-actions-context/compare/3c845d7c0375...51067c1ea1b0",
       "created": false,
       "deleted": false,
-      "forced": false,
+      "forced": true,
       "head_commit": {
         "author": {
           "email": "daniel.himmelstein@gmail.com",
@@ -64,11 +64,11 @@
           "username": "dhimmel"
         },
         "distinct": true,
-        "id": "c8e595e8399203d1dec58a754f25a5a5f5e3d534",
-        "message": "redact github.token in materialized logs\n\nalready redacted in workflow log output by github",
-        "timestamp": "2024-01-12T17:24:45-05:00",
-        "tree_id": "9f574e2c991d950f0a0693556c82b865cd2b2d67",
-        "url": "https://github.com/dhimmel/dump-actions-context/commit/c8e595e8399203d1dec58a754f25a5a5f5e3d534"
+        "id": "51067c1ea1b0b0bda20768a9b1c9a0a5d608ac5d",
+        "message": "note single quote in JSON bug",
+        "timestamp": "2024-01-12T18:40:53-05:00",
+        "tree_id": "59f860e3edc1928ecc88862524aa43cfe213ad9e",
+        "url": "https://github.com/dhimmel/dump-actions-context/commit/51067c1ea1b0b0bda20768a9b1c9a0a5d608ac5d"
       },
       "pusher": {
         "email": "daniel.himmelstein@gmail.com",
@@ -163,9 +163,9 @@
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/dhimmel/dump-actions-context/pulls{/number}",
-        "pushed_at": 1705098343,
+        "pushed_at": 1705102856,
         "releases_url": "https://api.github.com/repos/dhimmel/dump-actions-context/releases{/id}",
-        "size": 47,
+        "size": 55,
         "ssh_url": "git@github.com:dhimmel/dump-actions-context.git",
         "stargazers": 9,
         "stargazers_count": 9,
@@ -222,17 +222,17 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "dhimmel/dump-actions-context/.github/workflows/contexts.yaml@refs/heads/main",
-    "workflow_sha": "c8e595e8399203d1dec58a754f25a5a5f5e3d534",
+    "workflow_sha": "51067c1ea1b0b0bda20768a9b1c9a0a5d608ac5d",
     "workspace": "/home/runner/work/dump-actions-context/dump-actions-context",
     "action": "__run_9",
     "event_path": "/home/runner/work/_temp/_github_workflow/event.json",
     "action_repository": "",
     "action_ref": "",
-    "path": "/home/runner/work/_temp/_runner_file_commands/add_path_4e231f97-f357-40c6-a952-ba1fef54707b",
-    "env": "/home/runner/work/_temp/_runner_file_commands/set_env_4e231f97-f357-40c6-a952-ba1fef54707b",
-    "step_summary": "/home/runner/work/_temp/_runner_file_commands/step_summary_4e231f97-f357-40c6-a952-ba1fef54707b",
-    "state": "/home/runner/work/_temp/_runner_file_commands/save_state_4e231f97-f357-40c6-a952-ba1fef54707b",
-    "output": "/home/runner/work/_temp/_runner_file_commands/set_output_4e231f97-f357-40c6-a952-ba1fef54707b"
+    "path": "/home/runner/work/_temp/_runner_file_commands/add_path_19b849ee-c59b-4421-8c71-8b4f4b7a7090",
+    "env": "/home/runner/work/_temp/_runner_file_commands/set_env_19b849ee-c59b-4421-8c71-8b4f4b7a7090",
+    "step_summary": "/home/runner/work/_temp/_runner_file_commands/step_summary_19b849ee-c59b-4421-8c71-8b4f4b7a7090",
+    "state": "/home/runner/work/_temp/_runner_file_commands/save_state_19b849ee-c59b-4421-8c71-8b4f4b7a7090",
+    "output": "/home/runner/work/_temp/_runner_file_commands/set_output_19b849ee-c59b-4421-8c71-8b4f4b7a7090"
   },
   "job": {
     "status": "success"
