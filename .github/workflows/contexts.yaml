@@ -26,6 +26,9 @@ jobs:
           ref: main
       - name: Install Dependencies
         run: sudo apt-get install --yes jq gron
+      # BUG: any toJSON with single quotes will cause the echo statements to fail.
+      # Not sure how to fix this.
+      #
       # Note that the github context includes a token, but it is scrubbed from logs.
       # > Before each job begins, GitHub fetches an installation access token for the job.
       # > The GITHUB_TOKEN expires when a job finishes or after a maximum of 24 hours.
@@ -44,7 +47,6 @@ jobs:
       - name: Dump env context
         run: echo '${{ toJSON(env) }}' | gron --no-sort
       - name: Dump all contexts to a file
-        # gron --no-sort option is unstable https://github.com/tomnomnom/gron/issues/102
         run: |
           echo '{"github": ${{ toJSON(github) }},' > contexts.json
           echo '"job": ${{ toJSON(job) }},' >> contexts.json
@@ -53,6 +55,7 @@ jobs:
           echo '"strategy": ${{ toJSON(strategy) }},' >> contexts.json
           echo '"matrix": ${{ toJSON(matrix) }} }' >> contexts.json
           jq '.github.token = "***"' contexts.json > contexts/${{ github.event_name }}.json
+          # gron --no-sort option is unstable https://github.com/tomnomnom/gron/issues/102
           gron contexts.json > contexts/${{ github.event_name }}.gron
           gron --no-sort --colorize contexts.json
           rm contexts.json
