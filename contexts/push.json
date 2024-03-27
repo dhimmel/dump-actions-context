@@ -3,13 +3,13 @@
     "token": "***",
     "job": "dump_contexts_to_log",
     "ref": "refs/heads/main",
-    "sha": "51067c1ea1b0b0bda20768a9b1c9a0a5d608ac5d",
+    "sha": "e8d922025d91fca81e855d49e56b22ddd5fcbf45",
     "repository": "dhimmel/dump-actions-context",
     "repository_owner": "dhimmel",
     "repository_owner_id": "1117703",
     "repositoryUrl": "git://github.com/dhimmel/dump-actions-context.git",
-    "run_id": "7508641446",
-    "run_number": "96",
+    "run_id": "8460155400",
+    "run_number": "108",
     "retention_days": "90",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
@@ -25,9 +25,9 @@
     "base_ref": "",
     "event_name": "push",
     "event": {
-      "after": "51067c1ea1b0b0bda20768a9b1c9a0a5d608ac5d",
+      "after": "e8d922025d91fca81e855d49e56b22ddd5fcbf45",
       "base_ref": null,
-      "before": "3c845d7c0375e1261fd31728c2740db460ace979",
+      "before": "9c9b8749c0133e846f79f4598917fbeae800f9cd",
       "commits": [
         {
           "author": {
@@ -36,22 +36,22 @@
             "username": "dhimmel"
           },
           "committer": {
-            "email": "daniel.himmelstein@gmail.com",
-            "name": "Daniel Himmelstein",
-            "username": "dhimmel"
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
           },
           "distinct": true,
-          "id": "51067c1ea1b0b0bda20768a9b1c9a0a5d608ac5d",
-          "message": "note single quote in JSON bug",
-          "timestamp": "2024-01-12T18:40:53-05:00",
-          "tree_id": "59f860e3edc1928ecc88862524aa43cfe213ad9e",
-          "url": "https://github.com/dhimmel/dump-actions-context/commit/51067c1ea1b0b0bda20768a9b1c9a0a5d608ac5d"
+          "id": "e8d922025d91fca81e855d49e56b22ddd5fcbf45",
+          "message": "fix token scrubbing from gron",
+          "timestamp": "2024-03-27T19:48:22-04:00",
+          "tree_id": "1939914447da10ca9d1f1dd83f2efaa7019ae8f4",
+          "url": "https://github.com/dhimmel/dump-actions-context/commit/e8d922025d91fca81e855d49e56b22ddd5fcbf45"
         }
       ],
-      "compare": "https://github.com/dhimmel/dump-actions-context/compare/3c845d7c0375...51067c1ea1b0",
+      "compare": "https://github.com/dhimmel/dump-actions-context/compare/9c9b8749c013...e8d922025d91",
       "created": false,
       "deleted": false,
-      "forced": true,
+      "forced": false,
       "head_commit": {
         "author": {
           "email": "daniel.himmelstein@gmail.com",
@@ -59,16 +59,16 @@
           "username": "dhimmel"
         },
         "committer": {
-          "email": "daniel.himmelstein@gmail.com",
-          "name": "Daniel Himmelstein",
-          "username": "dhimmel"
+          "email": "noreply@github.com",
+          "name": "GitHub",
+          "username": "web-flow"
         },
         "distinct": true,
-        "id": "51067c1ea1b0b0bda20768a9b1c9a0a5d608ac5d",
-        "message": "note single quote in JSON bug",
-        "timestamp": "2024-01-12T18:40:53-05:00",
-        "tree_id": "59f860e3edc1928ecc88862524aa43cfe213ad9e",
-        "url": "https://github.com/dhimmel/dump-actions-context/commit/51067c1ea1b0b0bda20768a9b1c9a0a5d608ac5d"
+        "id": "e8d922025d91fca81e855d49e56b22ddd5fcbf45",
+        "message": "fix token scrubbing from gron",
+        "timestamp": "2024-03-27T19:48:22-04:00",
+        "tree_id": "1939914447da10ca9d1f1dd83f2efaa7019ae8f4",
+        "url": "https://github.com/dhimmel/dump-actions-context/commit/e8d922025d91fca81e855d49e56b22ddd5fcbf45"
       },
       "pusher": {
         "email": "daniel.himmelstein@gmail.com",
@@ -163,9 +163,9 @@
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/dhimmel/dump-actions-context/pulls{/number}",
-        "pushed_at": 1705102856,
+        "pushed_at": 1711583302,
         "releases_url": "https://api.github.com/repos/dhimmel/dump-actions-context/releases{/id}",
-        "size": 55,
+        "size": 79,
         "ssh_url": "git@github.com:dhimmel/dump-actions-context.git",
         "stargazers": 9,
         "stargazers_count": 9,
@@ -222,17 +222,17 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "dhimmel/dump-actions-context/.github/workflows/contexts.yaml@refs/heads/main",
-    "workflow_sha": "51067c1ea1b0b0bda20768a9b1c9a0a5d608ac5d",
+    "workflow_sha": "e8d922025d91fca81e855d49e56b22ddd5fcbf45",
     "workspace": "/home/runner/work/dump-actions-context/dump-actions-context",
     "action": "__run_9",
     "event_path": "/home/runner/work/_temp/_github_workflow/event.json",
     "action_repository": "",
     "action_ref": "",
-    "path": "/home/runner/work/_temp/_runner_file_commands/add_path_19b849ee-c59b-4421-8c71-8b4f4b7a7090",
-    "env": "/home/runner/work/_temp/_runner_file_commands/set_env_19b849ee-c59b-4421-8c71-8b4f4b7a7090",
-    "step_summary": "/home/runner/work/_temp/_runner_file_commands/step_summary_19b849ee-c59b-4421-8c71-8b4f4b7a7090",
-    "state": "/home/runner/work/_temp/_runner_file_commands/save_state_19b849ee-c59b-4421-8c71-8b4f4b7a7090",
-    "output": "/home/runner/work/_temp/_runner_file_commands/set_output_19b849ee-c59b-4421-8c71-8b4f4b7a7090"
+    "path": "/home/runner/work/_temp/_runner_file_commands/add_path_80945313-a963-4163-b166-167308645bf3",
+    "env": "/home/runner/work/_temp/_runner_file_commands/set_env_80945313-a963-4163-b166-167308645bf3",
+    "step_summary": "/home/runner/work/_temp/_runner_file_commands/step_summary_80945313-a963-4163-b166-167308645bf3",
+    "state": "/home/runner/work/_temp/_runner_file_commands/save_state_80945313-a963-4163-b166-167308645bf3",
+    "output": "/home/runner/work/_temp/_runner_file_commands/set_output_80945313-a963-4163-b166-167308645bf3"
   },
   "job": {
     "status": "success"
