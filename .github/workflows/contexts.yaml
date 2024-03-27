@@ -55,10 +55,10 @@ jobs:
           echo '"strategy": ${{ toJSON(strategy) }},' >> contexts.json
           echo '"matrix": ${{ toJSON(matrix) }} }' >> contexts.json
           jq '.github.token = "***"' contexts.json > contexts/${{ github.event_name }}.json
-          # gron --no-sort option is unstable https://github.com/tomnomnom/gron/issues/102
-          gron contexts.json > contexts/${{ github.event_name }}.gron
-          gron --no-sort --colorize contexts.json
           rm contexts.json
+          # gron --no-sort option is unstable https://github.com/tomnomnom/gron/issues/102
+          gron contexts/${{ github.event_name }}.json > contexts/${{ github.event_name }}.gron
+          gron --no-sort --colorize contexts/${{ github.event_name }}.json
       - name: Set current date
         run: echo "CURRENT_DATE=$(date --utc --iso)" >> $GITHUB_ENV  
       - name: Deploy contexts
