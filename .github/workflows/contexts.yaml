@@ -9,6 +9,25 @@ on:
   schedule:
     - cron: "51 17 * * 3"  # once a week, https://crontab.guru/#51_17_*_*_3
   workflow_dispatch:
+    inputs:
+      example_string:
+        type: string
+        default: "example value"
+      example_string_default:
+        type: string
+      example_choice:
+        type: choice
+        description: A choice input
+        options: 
+        - choice_a
+        - choice_b
+        default: choice_a
+      example_boolean:
+        type: boolean
+        description: A boolean input
+        default: false
+      environment:
+        type: environment
 
 jobs:
   dump_contexts_to_log:
