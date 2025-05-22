@@ -65,6 +65,8 @@ jobs:
         run: echo '${{ toJSON(matrix) }}' | gron --no-sort
       - name: Dump env context
         run: echo '${{ toJSON(env) }}' | gron --no-sort
+      - name: Dump inputs context
+        run: echo '${{ toJSON(inputs) }}' | gron --no-sort
       - name: Dump all contexts to a file
         run: |
           echo '{"github": ${{ toJSON(github) }},' > contexts.json
@@ -72,7 +74,9 @@ jobs:
           echo '"steps": ${{ toJSON(steps) }},' >> contexts.json
           echo '"runner": ${{ toJSON(runner) }},' >> contexts.json
           echo '"strategy": ${{ toJSON(strategy) }},' >> contexts.json
-          echo '"matrix": ${{ toJSON(matrix) }} }' >> contexts.json
+          echo '"matrix": ${{ toJSON(matrix) }},' >> contexts.json
+          # NOTE: this final line uses a different syntax: ' }' instead of ',' suffix
+          echo '"inputs": ${{ toJSON(inputs) }} }' >> contexts.json
           jq '.github.token = "***"' contexts.json > contexts/${{ github.event_name }}.json
           rm contexts.json
           # gron --no-sort option is unstable https://github.com/tomnomnom/gron/issues/102
@@ -86,4 +90,3 @@ jobs:
           commit_message: "contexts for ${{ github.event_name }} on ${{ env.CURRENT_DATE }}\n\n${{ github.event.repository.html_url }}/actions/runs/${{ github.run_id }}\n\n[skip ci]"
           skip_checkout: false
           branch: main
-
