@@ -45,6 +45,12 @@ jobs:
           ref: main
       - name: Install Dependencies
         run: sudo apt-get install --yes jq gron
+      # The `steps` context ONLY contains information about the steps in the
+      # current job that have an `id` specified and have already run.
+      # https://docs.github.com/en/actions/reference/workflows-and-actions/contexts#steps-context
+      - name: Generate steps context
+        id: step_foo
+        run: echo "output_bar=example step output" >> $GITHUB_OUTPUT
       # BUG: any toJSON with single quotes will cause the echo statements to fail.
       # Not sure how to fix this.
       #
