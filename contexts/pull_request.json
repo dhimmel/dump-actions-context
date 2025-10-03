@@ -1,61 +1,64 @@
 {
   "github": {
-    "token": "ghs_PfDNHCm9D3Lg5goE4IkeMoeOYKI72w0h0hKJ",
+    "token": "***",
     "job": "dump_contexts_to_log",
-    "ref": "refs/pull/3/merge",
-    "sha": "37ec0e81f31a7de75ff82d4230ca5cab2c3cf428",
+    "ref": "refs/pull/6/merge",
+    "sha": "0135871b92d27c204ebc0ef306b7b7c538be94ce",
     "repository": "dhimmel/dump-actions-context",
     "repository_owner": "dhimmel",
     "repository_owner_id": "1117703",
     "repositoryUrl": "git://github.com/dhimmel/dump-actions-context.git",
-    "run_id": "7466221673",
-    "run_number": "64",
+    "run_id": "18232729390",
+    "run_number": "201",
     "retention_days": "90",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "repository_visibility": "public",
-    "repo-self-hosted-runners-disabled": false,
-    "enterprise-managed-business-id": "",
-    "repository_id": "525463513",
     "actor_id": "1117703",
     "actor": "dhimmel",
-    "triggering_actor": "dhimmel",
     "workflow": "dump context",
-    "head_ref": "dsh-readme",
+    "head_ref": "pr-branch-2025-10-03",
     "base_ref": "main",
     "event_name": "pull_request",
+    "server_url": "https://github.com",
+    "api_url": "https://api.github.com",
+    "graphql_url": "https://api.github.com/graphql",
+    "ref_name": "6/merge",
+    "ref_protected": false,
+    "ref_type": "branch",
+    "secret_source": "Actions",
     "event": {
       "action": "opened",
-      "number": 3,
+      "number": 6,
       "pull_request": {
         "_links": {
           "comments": {
-            "href": "https://api.github.com/repos/dhimmel/dump-actions-context/issues/3/comments"
+            "href": "https://api.github.com/repos/dhimmel/dump-actions-context/issues/6/comments"
           },
           "commits": {
-            "href": "https://api.github.com/repos/dhimmel/dump-actions-context/pulls/3/commits"
+            "href": "https://api.github.com/repos/dhimmel/dump-actions-context/pulls/6/commits"
           },
           "html": {
-            "href": "https://github.com/dhimmel/dump-actions-context/pull/3"
+            "href": "https://github.com/dhimmel/dump-actions-context/pull/6"
           },
           "issue": {
-            "href": "https://api.github.com/repos/dhimmel/dump-actions-context/issues/3"
+            "href": "https://api.github.com/repos/dhimmel/dump-actions-context/issues/6"
           },
           "review_comment": {
             "href": "https://api.github.com/repos/dhimmel/dump-actions-context/pulls/comments{/number}"
           },
           "review_comments": {
-            "href": "https://api.github.com/repos/dhimmel/dump-actions-context/pulls/3/comments"
+            "href": "https://api.github.com/repos/dhimmel/dump-actions-context/pulls/6/comments"
           },
           "self": {
-            "href": "https://api.github.com/repos/dhimmel/dump-actions-context/pulls/3"
+            "href": "https://api.github.com/repos/dhimmel/dump-actions-context/pulls/6"
           },
           "statuses": {
-            "href": "https://api.github.com/repos/dhimmel/dump-actions-context/statuses/103004fb9183fd3e659ee0daadb079dde0e9d8a2"
+            "href": "https://api.github.com/repos/dhimmel/dump-actions-context/statuses/8053d11490414f3a40c23e22294fef43504286ca"
           }
         },
         "active_lock_reason": null,
-        "additions": 31,
+        "additions": 0,
         "assignee": null,
         "assignees": [],
         "author_association": "OWNER",
@@ -91,8 +94,8 @@
             "downloads_url": "https://api.github.com/repos/dhimmel/dump-actions-context/downloads",
             "events_url": "https://api.github.com/repos/dhimmel/dump-actions-context/events",
             "fork": false,
-            "forks": 3,
-            "forks_count": 3,
+            "forks": 4,
+            "forks_count": 4,
             "forks_url": "https://api.github.com/repos/dhimmel/dump-actions-context/forks",
             "full_name": "dhimmel/dump-actions-context",
             "git_commits_url": "https://api.github.com/repos/dhimmel/dump-actions-context/git/commits{/sha}",
@@ -152,17 +155,18 @@
               "starred_url": "https://api.github.com/users/dhimmel/starred{/owner}{/repo}",
               "subscriptions_url": "https://api.github.com/users/dhimmel/subscriptions",
               "type": "User",
-              "url": "https://api.github.com/users/dhimmel"
+              "url": "https://api.github.com/users/dhimmel",
+              "user_view_type": "public"
             },
             "private": false,
             "pulls_url": "https://api.github.com/repos/dhimmel/dump-actions-context/pulls{/number}",
-            "pushed_at": "2024-01-09T19:57:48Z",
+            "pushed_at": "2025-10-03T20:12:35Z",
             "releases_url": "https://api.github.com/repos/dhimmel/dump-actions-context/releases{/id}",
-            "size": 10,
+            "size": 159,
             "squash_merge_commit_message": "COMMIT_MESSAGES",
             "squash_merge_commit_title": "COMMIT_OR_PR_TITLE",
             "ssh_url": "git@github.com:dhimmel/dump-actions-context.git",
-            "stargazers_count": 9,
+            "stargazers_count": 16,
             "stargazers_url": "https://api.github.com/repos/dhimmel/dump-actions-context/stargazers",
             "statuses_url": "https://api.github.com/repos/dhimmel/dump-actions-context/statuses/{sha}",
             "subscribers_url": "https://api.github.com/repos/dhimmel/dump-actions-context/subscribers",
@@ -175,18 +179,20 @@
               "context",
               "github",
               "github-actions",
+              "gron",
+              "json",
               "workflow"
             ],
             "trees_url": "https://api.github.com/repos/dhimmel/dump-actions-context/git/trees{/sha}",
-            "updated_at": "2023-07-19T23:19:08Z",
+            "updated_at": "2025-10-03T18:25:31Z",
             "url": "https://api.github.com/repos/dhimmel/dump-actions-context",
             "use_squash_pr_title_as_default": false,
             "visibility": "public",
-            "watchers": 9,
-            "watchers_count": 9,
+            "watchers": 16,
+            "watchers_count": 16,
             "web_commit_signoff_required": false
           },
-          "sha": "d24c738eef19e9614a4012e473d55050d40ce547",
+          "sha": "0b8a007686a4593b9b1e5e0bd314885b2a673748",
           "user": {
             "avatar_url": "https://avatars.githubusercontent.com/u/1117703?v=4",
             "events_url": "https://api.github.com/users/dhimmel/events{/privacy}",
@@ -205,23 +211,24 @@
             "starred_url": "https://api.github.com/users/dhimmel/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/dhimmel/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/dhimmel"
+            "url": "https://api.github.com/users/dhimmel",
+            "user_view_type": "public"
           }
         },
-        "body": null,
-        "changed_files": 2,
+        "body": "refs https://github.com/dhimmel/dump-actions-context/issues/5",
+        "changed_files": 0,
         "closed_at": null,
         "comments": 0,
-        "comments_url": "https://api.github.com/repos/dhimmel/dump-actions-context/issues/3/comments",
-        "commits": 2,
-        "commits_url": "https://api.github.com/repos/dhimmel/dump-actions-context/pulls/3/commits",
-        "created_at": "2024-01-09T19:57:47Z",
-        "deletions": 29,
-        "diff_url": "https://github.com/dhimmel/dump-actions-context/pull/3.diff",
+        "comments_url": "https://api.github.com/repos/dhimmel/dump-actions-context/issues/6/comments",
+        "commits": 1,
+        "commits_url": "https://api.github.com/repos/dhimmel/dump-actions-context/pulls/6/commits",
+        "created_at": "2025-10-03T20:12:47Z",
+        "deletions": 0,
+        "diff_url": "https://github.com/dhimmel/dump-actions-context/pull/6.diff",
         "draft": false,
         "head": {
-          "label": "dhimmel:dsh-readme",
-          "ref": "dsh-readme",
+          "label": "dhimmel:pr-branch-2025-10-03",
+          "ref": "pr-branch-2025-10-03",
           "repo": {
             "allow_auto_merge": false,
             "allow_forking": true,
@@ -250,8 +257,8 @@
             "downloads_url": "https://api.github.com/repos/dhimmel/dump-actions-context/downloads",
             "events_url": "https://api.github.com/repos/dhimmel/dump-actions-context/events",
             "fork": false,
-            "forks": 3,
-            "forks_count": 3,
+            "forks": 4,
+            "forks_count": 4,
             "forks_url": "https://api.github.com/repos/dhimmel/dump-actions-context/forks",
             "full_name": "dhimmel/dump-actions-context",
             "git_commits_url": "https://api.github.com/repos/dhimmel/dump-actions-context/git/commits{/sha}",
@@ -311,17 +318,18 @@
               "starred_url": "https://api.github.com/users/dhimmel/starred{/owner}{/repo}",
               "subscriptions_url": "https://api.github.com/users/dhimmel/subscriptions",
               "type": "User",
-              "url": "https://api.github.com/users/dhimmel"
+              "url": "https://api.github.com/users/dhimmel",
+              "user_view_type": "public"
             },
             "private": false,
             "pulls_url": "https://api.github.com/repos/dhimmel/dump-actions-context/pulls{/number}",
-            "pushed_at": "2024-01-09T19:57:48Z",
+            "pushed_at": "2025-10-03T20:12:35Z",
             "releases_url": "https://api.github.com/repos/dhimmel/dump-actions-context/releases{/id}",
-            "size": 10,
+            "size": 159,
             "squash_merge_commit_message": "COMMIT_MESSAGES",
             "squash_merge_commit_title": "COMMIT_OR_PR_TITLE",
             "ssh_url": "git@github.com:dhimmel/dump-actions-context.git",
-            "stargazers_count": 9,
+            "stargazers_count": 16,
             "stargazers_url": "https://api.github.com/repos/dhimmel/dump-actions-context/stargazers",
             "statuses_url": "https://api.github.com/repos/dhimmel/dump-actions-context/statuses/{sha}",
             "subscribers_url": "https://api.github.com/repos/dhimmel/dump-actions-context/subscribers",
@@ -334,18 +342,20 @@
               "context",
               "github",
               "github-actions",
+              "gron",
+              "json",
               "workflow"
             ],
             "trees_url": "https://api.github.com/repos/dhimmel/dump-actions-context/git/trees{/sha}",
-            "updated_at": "2023-07-19T23:19:08Z",
+            "updated_at": "2025-10-03T18:25:31Z",
             "url": "https://api.github.com/repos/dhimmel/dump-actions-context",
             "use_squash_pr_title_as_default": false,
             "visibility": "public",
-            "watchers": 9,
-            "watchers_count": 9,
+            "watchers": 16,
+            "watchers_count": 16,
             "web_commit_signoff_required": false
           },
-          "sha": "103004fb9183fd3e659ee0daadb079dde0e9d8a2",
+          "sha": "8053d11490414f3a40c23e22294fef43504286ca",
           "user": {
             "avatar_url": "https://avatars.githubusercontent.com/u/1117703?v=4",
             "events_url": "https://api.github.com/users/dhimmel/events{/privacy}",
@@ -364,12 +374,13 @@
             "starred_url": "https://api.github.com/users/dhimmel/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/dhimmel/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/dhimmel"
+            "url": "https://api.github.com/users/dhimmel",
+            "user_view_type": "public"
           }
         },
-        "html_url": "https://github.com/dhimmel/dump-actions-context/pull/3",
-        "id": 1671268555,
-        "issue_url": "https://api.github.com/repos/dhimmel/dump-actions-context/issues/3",
+        "html_url": "https://github.com/dhimmel/dump-actions-context/pull/6",
+        "id": 2886101591,
+        "issue_url": "https://api.github.com/repos/dhimmel/dump-actions-context/issues/6",
         "labels": [],
         "locked": false,
         "maintainer_can_modify": false,
@@ -380,20 +391,20 @@
         "merged_at": null,
         "merged_by": null,
         "milestone": null,
-        "node_id": "PR_kwDOH1Hv2c5jnYjL",
-        "number": 3,
-        "patch_url": "https://github.com/dhimmel/dump-actions-context/pull/3.patch",
+        "node_id": "PR_kwDOH1Hv2c6sBmpX",
+        "number": 6,
+        "patch_url": "https://github.com/dhimmel/dump-actions-context/pull/6.patch",
         "rebaseable": null,
         "requested_reviewers": [],
         "requested_teams": [],
         "review_comment_url": "https://api.github.com/repos/dhimmel/dump-actions-context/pulls/comments{/number}",
         "review_comments": 0,
-        "review_comments_url": "https://api.github.com/repos/dhimmel/dump-actions-context/pulls/3/comments",
+        "review_comments_url": "https://api.github.com/repos/dhimmel/dump-actions-context/pulls/6/comments",
         "state": "open",
-        "statuses_url": "https://api.github.com/repos/dhimmel/dump-actions-context/statuses/103004fb9183fd3e659ee0daadb079dde0e9d8a2",
-        "title": "Update README and test deployment of PR contexts",
-        "updated_at": "2024-01-09T19:57:47Z",
-        "url": "https://api.github.com/repos/dhimmel/dump-actions-context/pulls/3",
+        "statuses_url": "https://api.github.com/repos/dhimmel/dump-actions-context/statuses/8053d11490414f3a40c23e22294fef43504286ca",
+        "title": "commit to trigger pull request event",
+        "updated_at": "2025-10-03T20:12:47Z",
+        "url": "https://api.github.com/repos/dhimmel/dump-actions-context/pulls/6",
         "user": {
           "avatar_url": "https://avatars.githubusercontent.com/u/1117703?v=4",
           "events_url": "https://api.github.com/users/dhimmel/events{/privacy}",
@@ -412,7 +423,8 @@
           "starred_url": "https://api.github.com/users/dhimmel/starred{/owner}{/repo}",
           "subscriptions_url": "https://api.github.com/users/dhimmel/subscriptions",
           "type": "User",
-          "url": "https://api.github.com/users/dhimmel"
+          "url": "https://api.github.com/users/dhimmel",
+          "user_view_type": "public"
         }
       },
       "repository": {
@@ -437,8 +449,8 @@
         "downloads_url": "https://api.github.com/repos/dhimmel/dump-actions-context/downloads",
         "events_url": "https://api.github.com/repos/dhimmel/dump-actions-context/events",
         "fork": false,
-        "forks": 3,
-        "forks_count": 3,
+        "forks": 4,
+        "forks_count": 4,
         "forks_url": "https://api.github.com/repos/dhimmel/dump-actions-context/forks",
         "full_name": "dhimmel/dump-actions-context",
         "git_commits_url": "https://api.github.com/repos/dhimmel/dump-actions-context/git/commits{/sha}",
@@ -496,15 +508,16 @@
           "starred_url": "https://api.github.com/users/dhimmel/starred{/owner}{/repo}",
           "subscriptions_url": "https://api.github.com/users/dhimmel/subscriptions",
           "type": "User",
-          "url": "https://api.github.com/users/dhimmel"
+          "url": "https://api.github.com/users/dhimmel",
+          "user_view_type": "public"
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/dhimmel/dump-actions-context/pulls{/number}",
-        "pushed_at": "2024-01-09T19:57:48Z",
+        "pushed_at": "2025-10-03T20:12:35Z",
         "releases_url": "https://api.github.com/repos/dhimmel/dump-actions-context/releases{/id}",
-        "size": 10,
+        "size": 159,
         "ssh_url": "git@github.com:dhimmel/dump-actions-context.git",
-        "stargazers_count": 9,
+        "stargazers_count": 16,
         "stargazers_url": "https://api.github.com/repos/dhimmel/dump-actions-context/stargazers",
         "statuses_url": "https://api.github.com/repos/dhimmel/dump-actions-context/statuses/{sha}",
         "subscribers_url": "https://api.github.com/repos/dhimmel/dump-actions-context/subscribers",
@@ -517,14 +530,16 @@
           "context",
           "github",
           "github-actions",
+          "gron",
+          "json",
           "workflow"
         ],
         "trees_url": "https://api.github.com/repos/dhimmel/dump-actions-context/git/trees{/sha}",
-        "updated_at": "2023-07-19T23:19:08Z",
+        "updated_at": "2025-10-03T18:25:31Z",
         "url": "https://api.github.com/repos/dhimmel/dump-actions-context",
         "visibility": "public",
-        "watchers": 9,
-        "watchers_count": 9,
+        "watchers": 16,
+        "watchers_count": 16,
         "web_commit_signoff_required": false
       },
       "sender": {
@@ -545,37 +560,42 @@
         "starred_url": "https://api.github.com/users/dhimmel/starred{/owner}{/repo}",
         "subscriptions_url": "https://api.github.com/users/dhimmel/subscriptions",
         "type": "User",
-        "url": "https://api.github.com/users/dhimmel"
+        "url": "https://api.github.com/users/dhimmel",
+        "user_view_type": "public"
       }
     },
-    "server_url": "https://github.com",
-    "api_url": "https://api.github.com",
-    "graphql_url": "https://api.github.com/graphql",
-    "ref_name": "3/merge",
-    "ref_protected": false,
-    "ref_type": "branch",
-    "secret_source": "Actions",
-    "workflow_ref": "dhimmel/dump-actions-context/.github/workflows/contexts.yaml@refs/pull/3/merge",
-    "workflow_sha": "37ec0e81f31a7de75ff82d4230ca5cab2c3cf428",
+    "workflow_ref": "dhimmel/dump-actions-context/.github/workflows/contexts.yaml@refs/pull/6/merge",
+    "workflow_sha": "0135871b92d27c204ebc0ef306b7b7c538be94ce",
+    "repository_id": "525463513",
+    "triggering_actor": "dhimmel",
     "workspace": "/home/runner/work/dump-actions-context/dump-actions-context",
-    "action": "__run_8",
+    "action": "__run_10",
     "event_path": "/home/runner/work/_temp/_github_workflow/event.json",
     "action_repository": "",
     "action_ref": "",
-    "path": "/home/runner/work/_temp/_runner_file_commands/add_path_6c439b60-f7a8-440a-9fe2-adad40df6ff5",
-    "env": "/home/runner/work/_temp/_runner_file_commands/set_env_6c439b60-f7a8-440a-9fe2-adad40df6ff5",
-    "step_summary": "/home/runner/work/_temp/_runner_file_commands/step_summary_6c439b60-f7a8-440a-9fe2-adad40df6ff5",
-    "state": "/home/runner/work/_temp/_runner_file_commands/save_state_6c439b60-f7a8-440a-9fe2-adad40df6ff5",
-    "output": "/home/runner/work/_temp/_runner_file_commands/set_output_6c439b60-f7a8-440a-9fe2-adad40df6ff5"
+    "path": "/home/runner/work/_temp/_runner_file_commands/add_path_d42b3a1e-0bc1-42d9-81b7-a8fe523658fe",
+    "env": "/home/runner/work/_temp/_runner_file_commands/set_env_d42b3a1e-0bc1-42d9-81b7-a8fe523658fe",
+    "step_summary": "/home/runner/work/_temp/_runner_file_commands/step_summary_d42b3a1e-0bc1-42d9-81b7-a8fe523658fe",
+    "state": "/home/runner/work/_temp/_runner_file_commands/save_state_d42b3a1e-0bc1-42d9-81b7-a8fe523658fe",
+    "output": "/home/runner/work/_temp/_runner_file_commands/set_output_d42b3a1e-0bc1-42d9-81b7-a8fe523658fe"
   },
   "job": {
+    "check_run_id": 51919786384,
     "status": "success"
   },
-  "steps": {},
+  "steps": {
+    "step_foo": {
+      "outputs": {
+        "output_bar": "example step output"
+      },
+      "outcome": "success",
+      "conclusion": "success"
+    }
+  },
   "runner": {
     "os": "Linux",
     "arch": "X64",
-    "name": "GitHub Actions 2",
+    "name": "GitHub Actions 1000000521",
     "environment": "github-hosted",
     "tool_cache": "/opt/hostedtoolcache",
     "temp": "/home/runner/work/_temp",
@@ -587,5 +607,6 @@
     "job-total": 1,
     "max-parallel": 1
   },
-  "matrix": null
+  "matrix": null,
+  "inputs": {}
 }
