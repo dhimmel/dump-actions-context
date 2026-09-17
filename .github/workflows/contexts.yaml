@@ -18,7 +18,7 @@ on:
       example_choice:
         type: choice
         description: A choice input
-        options: 
+        options:
         - choice_a
         - choice_b
         default: choice_a
@@ -50,46 +50,71 @@ jobs:
       # https://docs.github.com/en/actions/reference/workflows-and-actions/contexts#steps-context
       - name: Generate steps context
         id: step_foo
-        run: echo "output_bar=example step output" >> $GITHUB_OUTPUT
-      # BUG: any toJSON with single quotes will cause the echo statements to fail.
-      # Not sure how to fix this.
+        run: echo "output_bar=example step output" >> "$GITHUB_OUTPUT"
+      # Pass in context as environment variable so Bash can properly handle single quotes in the context content.
+      # https://github.com/actions/runner/issues/1656#issuecomment-1030077729
+      # https://docs.github.com/en/actions/reference/workflows-and-actions/contexts#example-printing-context-information-to-the-log
       #
       # Note that the github context includes a token, but it is scrubbed from logs.
       # > Before each job begins, GitHub fetches an installation access token for the job.
       # > The GITHUB_TOKEN expires when a job finishes or after a maximum of 24 hours.
       - name: Dump github context
-        run: echo '${{ toJSON(github) }}' | gron --no-sort
+        run: echo "$GITHUB_CONTEXT" | gron --no-sort
+        env:
+          GITHUB_CONTEXT: ${{ toJSON(github) }}
       - name: Dump job context
-        run: echo '${{ toJSON(job) }}' | gron --no-sort
+        run: echo "$JOB_CONTEXT" | gron --no-sort
+        env:
+          JOB_CONTEXT: ${{ toJSON(job) }}
       - name: Dump steps context
-        run: echo '${{ toJSON(steps) }}' | gron --no-sort
+        run: echo "$STEPS_CONTEXT" | gron --no-sort
+        env:
+          STEPS_CONTEXT: ${{ toJSON(steps) }}
       - name: Dump runner context
-        run: echo '${{ toJSON(runner) }}' | gron --no-sort
+        run: echo "$RUNNER_CONTEXT" | gron --no-sort
+        env:
+          RUNNER_CONTEXT: ${{ toJSON(runner) }}
       - name: Dump strategy context
-        run: echo '${{ toJSON(strategy) }}' | gron --no-sort
+        run: echo "$STRATEGY_CONTEXT" | gron --no-sort
+        env:
+          STRATEGY_CONTEXT: ${{ toJSON(strategy) }}
       - name: Dump matrix context
-        run: echo '${{ toJSON(matrix) }}' | gron --no-sort
+        run: echo "$MATRIX_CONTEXT" | gron --no-sort
+        env:
+          MATRIX_CONTEXT: ${{ toJSON(matrix) }}
       - name: Dump env context
-        run: echo '${{ toJSON(env) }}' | gron --no-sort
+        run: echo "$ENV_CONTEXT" | jq 'del(.ENV_CONTEXT)' | gron --no-sort
+        env:
+          ENV_CONTEXT: ${{ toJSON(env) }}
       - name: Dump inputs context
-        run: echo '${{ toJSON(inputs) }}' | gron --no-sort
+        run: echo "$INPUTS_CONTEXT" | gron --no-sort
+        env:
+          INPUTS_CONTEXT: ${{ toJSON(inputs) }}
       - name: Dump all contexts to a file
         run: |
-          echo '{"github": ${{ toJSON(github) }},' > contexts.json
-          echo '"job": ${{ toJSON(job) }},' >> contexts.json
-          echo '"steps": ${{ toJSON(steps) }},' >> contexts.json
-          echo '"runner": ${{ toJSON(runner) }},' >> contexts.json
-          echo '"strategy": ${{ toJSON(strategy) }},' >> contexts.json
-          echo '"matrix": ${{ toJSON(matrix) }},' >> contexts.json
+          echo "{\"github\": $GITHUB_CONTEXT," > contexts.json
+          echo "\"job\": $JOB_CONTEXT," >> contexts.json
+          echo "\"steps\": $STEPS_CONTEXT," >> contexts.json
+          echo "\"runner\": $RUNNER_CONTEXT," >> contexts.json
+          echo "\"strategy\": $STRATEGY_CONTEXT," >> contexts.json
+          echo "\"matrix\": $MATRIX_CONTEXT," >> contexts.json
           # NOTE: this final line uses a different syntax: ' }' instead of ',' suffix
-          echo '"inputs": ${{ toJSON(inputs) }} }' >> contexts.json
+          echo "\"inputs\": $INPUTS_CONTEXT }" >> contexts.json
           jq '.github.token = "***"' contexts.json > contexts/${{ github.event_name }}.json
           rm contexts.json
           # gron --no-sort option is unstable https://github.com/tomnomnom/gron/issues/102
           gron contexts/${{ github.event_name }}.json > contexts/${{ github.event_name }}.gron
           gron --no-sort --colorize contexts/${{ github.event_name }}.json
+        env:
+          GITHUB_CONTEXT: ${{ toJSON(github) }}
+          JOB_CONTEXT: ${{ toJSON(job) }}
+          STEPS_CONTEXT: ${{ toJSON(steps) }}
+          RUNNER_CONTEXT: ${{ toJSON(runner) }}
+          STRATEGY_CONTEXT: ${{ toJSON(strategy) }}
+          MATRIX_CONTEXT: ${{ toJSON(matrix) }}
+          INPUTS_CONTEXT: ${{ toJSON(inputs) }}
       - name: Set current date
-        run: echo "CURRENT_DATE=$(date --utc --iso)" >> $GITHUB_ENV  
+        run: echo "CURRENT_DATE=$(date --utc --iso)" >> "$GITHUB_ENV"
       - name: Deploy contexts
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
