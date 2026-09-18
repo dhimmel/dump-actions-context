@@ -25,6 +25,6 @@ so for many event types, only the materialized files committed back to the repos
 
 ## References
 
-- https://docs.github.com/en/actions/learn-github-actions/contexts#example-printing-context-information-to-the-log
+- https://docs.github.com/en/actions/reference/workflows-and-actions/contexts#example-printing-context-information-to-the-log
 - https://github.com/community/community/discussions/12269
 - https://twitter.com/dhimmel/status/1559592874282557442

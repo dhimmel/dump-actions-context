@@ -1,7 +1,7 @@
-# based on https://docs.github.com/en/actions/learn-github-actions/contexts#example-printing-context-information-to-the-log
+# based on https://docs.github.com/en/actions/reference/workflows-and-actions/contexts#example-printing-context-information-to-the-log
 name: dump context
 on:
-  # see all at https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#available-events
+  # see all at https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows
   create:
   push:
   pull_request:
@@ -33,7 +33,7 @@ jobs:
   dump_contexts_to_log:
     name: ${{ github.event_name }}
     runs-on: ubuntu-latest
-    # https://docs.github.com/en/actions/security-guides/automatic-token-authentication#permissions-for-the-github_token
+    # https://docs.github.com/en/actions/tutorials/authenticate-with-github_token
     permissions:
       contents: write
     steps:
@@ -51,10 +51,6 @@ jobs:
       - name: Generate steps context
         id: step_foo
         run: echo "output_bar=example step output" >> "$GITHUB_OUTPUT"
-      # Pass in context as environment variable so Bash can properly handle single quotes in the context content.
-      # https://github.com/actions/runner/issues/1656#issuecomment-1030077729
-      # https://docs.github.com/en/actions/reference/workflows-and-actions/contexts#example-printing-context-information-to-the-log
-      #
       # Note that the github context includes a token, but it is scrubbed from logs.
       # > Before each job begins, GitHub fetches an installation access token for the job.
       # > The GITHUB_TOKEN expires when a job finishes or after a maximum of 24 hours.
