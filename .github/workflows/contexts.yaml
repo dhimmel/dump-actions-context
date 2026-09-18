@@ -116,6 +116,13 @@ jobs:
       - name: Set current date
         run: echo "CURRENT_DATE=$(date --utc --iso)" >> "$GITHUB_ENV"
       - name: Deploy contexts
+        # skip deployment on "pull_request" events not triggered by repo
+        # owner, which usually failed due to no permission
+        if: |
+          ! (
+            github.event_name == 'pull_request' &&
+            github.repository_owner != github.triggering_actor
+          )
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "contexts for ${{ github.event_name }} on ${{ env.CURRENT_DATE }}\n\n${{ github.event.repository.html_url }}/actions/runs/${{ github.run_id }}\n\n[skip ci]"
